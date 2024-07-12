@@ -1,10 +1,18 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import Container from '@/components/ui/container'
 import Navbar from '@/components/ui/navbar'
 import Image from 'next/image'
 import { TiTickOutline } from 'react-icons/ti'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
+    const router = useRouter()
+    const handleClick = () => {
+        router.push('/resume-page')
+    }
+
     return (
         <main className="min-h-screen">
             <Navbar />
@@ -32,7 +40,7 @@ export default function Home() {
                     </p>
                 </div>
 
-                <Button size={'lg'} className="my-5">
+                <Button size={'lg'} className="my-5" onClick={handleClick}>
                     Create Resume
                 </Button>
                 <div className="rounded-lg">
