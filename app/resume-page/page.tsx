@@ -38,21 +38,21 @@ export default function ResumePage() {
                     Back
                 </div>
                 <div className="flex justify-center items-center border-r px-3 gap-2">
-                    <h2>Color</h2>
+                    <h2>Pick Color</h2>
                 </div>
                 <div className="flex justify-center items-center border-r px-3 gap-2">
-                    <h2>Font</h2>
+                    <h2>Choose Font</h2>
                     <p></p>
                 </div>
-                <div className="flex justify-center items-center border-r px-3 gap-2">
-                    <IoMdDownload />
+                <div className="flex justify-center items-center border-r px-3 gap-2 cursor-pointer group">
+                    <IoMdDownload className="group-hover:text-lime-700 duration-300" />
                     <h2>Download</h2>
                 </div>
                 <Dialog>
                     <DialogTrigger asChild>
                         <div className="flex justify-center items-center border-r px-3 gap-2 cursor-pointer">
                             <CgTemplate />
-                            <h2>Template</h2>
+                            <h2>Change Template</h2>
                         </div>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-md">
@@ -80,8 +80,8 @@ export default function ResumePage() {
                         </div>
                     </DialogContent>
                 </Dialog>
-                <div className="flex justify-center items-center border-r px-3 gap-2">
-                    <MdFileUpload />
+                <div className="flex justify-center items-center border-r px-3 gap-2 group cursor-pointer">
+                    <MdFileUpload className="group-hover:text-blue-500 duration-300" />
                     <h2>Upload</h2>
                 </div>
                 <div className="flex justify-center items-center gap-2">
