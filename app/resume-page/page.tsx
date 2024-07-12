@@ -1,3 +1,5 @@
+'use client'
+
 import {
     Dialog,
     DialogClose,
@@ -13,13 +15,28 @@ import { CgTemplate } from 'react-icons/cg'
 import { MdFileUpload } from 'react-icons/md'
 import { IoSettings } from 'react-icons/io5'
 import Container from '@/components/ui/container'
-import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import { IoArrowBack } from 'react-icons/io5'
+import { useRouter } from 'next/navigation'
 
 export default function ResumePage() {
+    const router = useRouter()
+
+    const handleBack = () => {
+        if (router) {
+            router.back()
+        }
+    }
     return (
         <div>
             <div className="px-8 py-5 flex flex-row w-screen justify-center items-center gap-3 text-xl font-bold leading-8">
+                <div
+                    className="flex justify-center items-center gap-2 cursor-pointer"
+                    onClick={handleBack}
+                >
+                    <IoArrowBack className="hover:scale-150 duration-300" />
+                    Back
+                </div>
                 <div className="flex justify-center items-center border-r px-3 gap-2">
                     <h2>Color</h2>
                 </div>

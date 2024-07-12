@@ -6,6 +6,7 @@ import Navbar from '@/components/ui/navbar'
 import Image from 'next/image'
 import { TiTickOutline } from 'react-icons/ti'
 import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 export default function Home() {
     const router = useRouter()
